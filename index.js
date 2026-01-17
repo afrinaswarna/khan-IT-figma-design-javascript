@@ -62,3 +62,33 @@ const displayServices = () => {
   return;
 };
 displayServices()
+
+const displayModal = () => {
+  const modalContainer = document.getElementById("modal-container");
+  modalContainer.innerHTML = "";
+  const modalDiv = document.createElement("div");
+  modalDiv.innerHTML = `
+<div class="space-y-4">
+      <fieldset class="bg-base-200 border border-base-300 rounded-box p-4">
+        <legend class="font-semibold">For free consultation please register</legend>
+
+        <label class="label">Name</label>
+        <input type="text" class="input input-bordered w-full" placeholder="Your name" />
+
+        <label class="label">Email</label>
+        <input type="email" class="input input-bordered w-full" placeholder="Email address" />
+
+        <label class="label">Phone</label>
+        <input type="text" class="input input-bordered w-full" placeholder="Phone number" />
+
+        
+
+        <button class="btn btn-primary w-full mt-4">Submit</button>
+      </fieldset>
+    </div>
+
+
+`;
+  modalContainer.appendChild(modalDiv);
+  document.getElementById("my_modal_5").showModal();
+};

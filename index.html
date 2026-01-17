@@ -4,6 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Khan IT figma design</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -34,6 +39,9 @@
         padding-bottom: 8px;
         border-radius: 8px;
       }
+      .text-secondary{
+        color:#65758B;
+      }
     </style>
   </head>
   <body>
@@ -42,7 +50,7 @@
         <img src="./assets/Layer_1.png" alt="" class="w-54 h-11 object-cover" />
 
         <ul class="flex gap-4 font-medium">
-          <li><a class="text-sm" href="">Home</a></li>
+          <li><a class="text-sm text-[#0271e8e8]" href="">Home</a></li>
           <li><a class="text-sm" href="">About</a></li>
         </ul>
 
@@ -54,7 +62,7 @@
       <main>
         <!-- hero section -->
         <section>
-          <div class="flex flex-col lg:flex-row m-10 lg:w-11/12 lg:mx-auto my-30 gap-14">
+          <div class="flex flex-col lg:flex-row m-10 lg:w-11/12 lg:mx-auto lg:my-30 gap-14">
             <!-- hero left side -->
             <div class="lg:w-[60%]">
               <h2
@@ -67,7 +75,7 @@
                 150% more leads and 2.5x higher conversions through integrated
                 digital marketing and web design.
               </p>
-              <button class="btn-primary">Book Your Free Consultation</button>
+              <button onclick="displayModal()" class="btn-primary">Book Your Free Consultation</button>
             </div>
             <!-- hero right side -->
             <div class="flex flex-col lg:flex-row gap-4 lg:w-[40%]">
@@ -93,9 +101,9 @@
                   </div>
                 </div>
               </div>
-              <div class="lg:w-1/2 relative">
+              <div class="lg:w-1/2 lg:relative">
                 <div
-                  class="border w-full border-[#B4D5F9] p-3 rounded-3xl bg-linear-to-br from-[#C4DBF5] to-[#ECF1F8] absolute top-10"
+                  class="border w-full border-[#B4D5F9] p-3 rounded-3xl bg-linear-to-br from-[#C4DBF5] to-[#ECF1F8] lg:absolute lg:top-10 mb-6"
                 >
                   <h4 class="font-bold text-lg inter-font text-[#060606] mb-2">
                     Our Track Record
@@ -158,7 +166,7 @@
                   </div>
                 </div>
                 <div
-                  class="bg-linear-to-br from-[#FEEFDB] to-[#FCF2F2] border border-[#FDE1BF] rounded-3xl w-full p-4 space-y-3 absolute top-84.25"
+                  class="bg-linear-to-br from-[#FEEFDB] to-[#FCF2F2] border border-[#FDE1BF] rounded-3xl w-full p-4 space-y-3 lg:absolute lg:top-84.25"
                 >
                   <img
                     src="./assets/walton-seeklogo 1.png"
@@ -195,6 +203,21 @@
         </div>
 
          </section>
+         <!-- consultation modal  -->
+          <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+        <div class="modal-box">
+         <div id="modal-container">
+          
+
+         </div>
+          <div class="modal-action">
+            <form method="dialog">
+              <!-- if there is a button in form, it will close the modal -->
+              <button class="btn">Close</button>
+            </form>
+          </div>
+        </div>
+      </dialog>
       </main>
     </header>
     <script src="./index.js"></script>
